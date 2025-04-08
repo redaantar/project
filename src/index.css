@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl font-bold tracking-tight;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#0066FF] to-[#00CC66] text-transparent bg-clip-text animate-gradient bg-300;
+  }
+
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-lg border border-gray-200/50 rounded-2xl shadow-sm;
+  }
+
+  .hover-card-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-[#0066FF]/10 hover:-translate-y-1;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .section-title {
+    @apply text-center mb-16;
+  }
+
+  .section-heading {
+    @apply gradient-text mb-4;
+  }
+
+  .section-subheading {
+    @apply text-xl text-gray-600 max-w-3xl mx-auto;
+  }
+
+  .feature-card {
+    @apply glass-card p-8 hover-card-glow;
+  }
+
+  .feature-icon {
+    @apply bg-[#0066FF]/10 rounded-lg p-3 text-[#0066FF];
+  }
+
+  .feature-title {
+    @apply text-xl font-bold gradient-text mb-4;
+  }
+
+  .feature-description {
+    @apply text-gray-600;
+  }
+
+  .button-primary {
+    @apply bg-gradient-to-r from-[#0066FF] to-[#00CC66] text-white px-6 py-3 rounded-lg hover:opacity-90 transition-all font-semibold shadow-md hover:shadow-lg;
+  }
+
+  .button-secondary {
+    @apply border-2 border-[#0066FF] text-[#0066FF] px-6 py-3 rounded-lg hover:bg-[#0066FF]/5 transition-colors font-semibold;
+  }
+}
+
+.gradient-border {
+  background: linear-gradient(90deg, #0066FF, #00CC66);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Additional utility classes for gradient backgrounds */
+.bg-300 {
+  background-size: 300% 300%;
+}
+
+/* Swiper custom styles */
+.swiper-slide {
+  opacity: 0 !important;
+  transition: opacity 1s ease;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+}
+
+/* Hide default Swiper navigation arrows */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none !important;
+}
+
+/* Custom navigation buttons */
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+  @apply transition-all duration-300;
+}
+
+.custom-swiper-button-prev:focus,
+.custom-swiper-button-next:focus {
+  @apply outline-none ring-2 ring-white/50;
+}
+
+/* Custom pagination */
+.swiper-pagination {
+  @apply flex justify-center items-center space-x-3;
+}
+
+.swiper-pagination-bullet {
+  @apply w-2.5 h-2.5 rounded-full bg-white/50 transition-all duration-300 cursor-pointer hover:bg-white/75;
+  margin: 0 4px !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply w-3 h-3 bg-[#0066FF] !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .custom-swiper-button-prev,
+  .custom-swiper-button-next {
+    @apply w-10 h-10;
+  }
+
+  .swiper-pagination-bullet {
+    @apply w-2 h-2;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply w-2.5 h-2.5;
+  }
+}
+
+/* Animation for navigation buttons */
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.custom-swiper-button-prev:hover,
+.custom-swiper-button-next:hover {
+  animation: buttonPulse 1.5s infinite;
+}
