@@ -1,6 +1,7 @@
-import React from 'react';
 import { Instagram, Linkedin } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import appleBadge from '../assets/app_store_badge.svg';
+import googlePlayBadge from '../assets/google_play_badge.svg';
 
 export function Footer() {
   const location = useLocation();
@@ -61,9 +62,9 @@ export function Footer() {
                 aria-label="Download Aidra on the App Store"
               >
                 <img
-                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                  src={appleBadge}
                   alt="Download on the App Store"
-                  className="w-full h-full object-contain"
+                  className="w-100 h-100"
                   loading="lazy"
                 />
               </a>
@@ -75,9 +76,9 @@ export function Footer() {
                 aria-label="Get Aidra on Google Play"
               >
                 <img
-                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  src={googlePlayBadge}
                   alt="Get it on Google Play"
-                  className="w-full h-full object-contain"
+                  className="w-100 h-100"
                   loading="lazy"
                 />
               </a>

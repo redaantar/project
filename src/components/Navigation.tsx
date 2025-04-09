@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { LanguageSelector } from './LanguageSelector';
 import logoSrc from '../assets/logo.svg'; // Import the logo from assets
 
 export function Navigation() {
