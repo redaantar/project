@@ -33,21 +33,21 @@ export function Vision2030() {
   const stats = [
     {
       icon: <Recycle className="h-6 w-6 text-emerald-400" />,
-      value: "50–60M",
-      label: "tons of waste generated annually in KSA",
-      description: "An untapped opportunity for traceable, circular recovery."
+      value: "81%",
+      label: "recycling target by 2035.",
+      description: "Unlocking value from waste through traceability, recovery, and circular efficiency at scale."
     },
     {
       icon: <Leaf className="h-6 w-6 text-emerald-400" />,
-      value: "130 GW",
-      label: "renewable energy capacity targeted by 2030",
-      description: "Driving demand for measurable, tech-enabled decarbonization."
+      value: "278M",
+      label: "tons of CO₂ emissions to be cut annually by 2030.",
+      description: "Driving national decarbonization through traceable action and low-carbon innovation."
     },
     {
       icon: <Droplet className="h-6 w-6 text-emerald-400" />,
-      value: "150,000+",
-      label: "entities to be connected",
-      description: "Enabling real-time sustainability tracking and participation in national carbon programs under the Saudi Green Initiative."
+      value: "10B",
+      label: "trees to be planted across Saudi Arabia.",
+      description: "Supporting large-scale afforestation, carbon capture, and ecosystem regeneration."
     }
   ];
 

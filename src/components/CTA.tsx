@@ -167,7 +167,7 @@ export function CTA() {
             variants={containerVariants}
             className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full max-w-2xl mx-auto"
           >
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="w-full sm:w-auto bg-white text-[#0066FF] px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center text-lg font-semibold shadow-lg shadow-black/20"
@@ -182,7 +182,7 @@ export function CTA() {
               className="text-white/90 text-center sm:text-left text-lg"
             >
               Join us and be part of Saudi Arabia's sustainability journey
-            </motion.p>
+            </motion.p> */}
           </motion.div>
         </motion.div>
       </section>
