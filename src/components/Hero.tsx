@@ -157,20 +157,24 @@ export const Hero = () => {
             </SwiperSlide>
           ))}
 
-          <button 
-            className="custom-swiper-button-prev absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 opacity-0 group-hover:opacity-100 transform hover:scale-110"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-6 h-6 text-white" />
-          </button>
-          <button 
-            className="custom-swiper-button-next absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 opacity-0 group-hover:opacity-100 transform hover:scale-110"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="w-6 h-6 text-white" />
-          </button>
+          <div className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <button 
+              className="custom-swiper-button-prev w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform-gpu hover:scale-110"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-6 h-6 text-white" />
+            </button>
+          </div>
+          <div className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <button 
+              className="custom-swiper-button-next w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform-gpu hover:scale-110"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="w-6 h-6 text-white" />
+            </button>
+          </div>
 
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-2 swiper-pagination"></div>
+          <div className="absolute bottom-8 left-0 right-0 justify-center z-30 flex swiper-pagination"></div>
         </Swiper>
       </motion.div>
     </section>
